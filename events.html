@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Management System - Daniel Oyeniyi</title>
+    <meta
+      name="description"
+      content="WDD 231 - Event Management System - Daniel Oyeniyi"
+    />
+    <meta name="author" content="Daniel Oyeniyi" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta property="og:title" content="Event Management System - Daniel Oyeniyi" />
+
+    <meta property="og:image" content="images/logo.png" />
+    <meta
+      property="og:url"
+      content="https://dandrichest.github.io/wdd231/final-project/index.html"
+    />
+    <meta property="og:type" content="website"/>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/style.css" />
+    <script defer src="scripts/script-two.js"></script>
+    <link rel="icon" href="favicon.ico" />
+  </head>
+  <body>
+    <header>
+        <img src="images/logo.png" alt="ems image" width="34" height="40" />
+         <span>EMS Event Management System</span>
+         <button id="menu" aria-label="menu" onclick="toggleMenu()"></button>
+     </header>
+      <nav id="animateme">
+        <ul class="navigation">
+          <li><a href="index.html" title="index">Home</a></li>
+          <li><a href="events.html" class="active">Events</a></li>
+          <li>
+            <a href="registration.html" title="registration">Registration</a>
+          </li>
+        </ul>
+      </nav>
+    
+    <main>
+ <section id="event-container" class="event-container">
+      <!-- Events will be dynamically injected here -->
+    </section>
+    <button id="addEventButton" class="add-event-button">Add Event</button>
+
+    <!-- Dialog for Adding New Event -->
+    <dialog id="eventDialog">
+      <form id="eventForm">
+        <h2>Add New Event</h2>
+        <label for="eventName">Event Name:</label>
+        <input type="text" id="eventName" required>
+        <label for="eventDate">Event Date:</label>
+        <input type="date" id="eventDate" required>
+        <label for="eventLocation">Event Location:</label>
+        <input type="text" id="eventLocation" required>
+        <label for="eventDescription">Event Description:</label>
+        <textarea id="eventDescription" required></textarea>
+        <button type="submit">Add Event</button>
+        <button type="button" id="closeDialogButton">Cancel</button>
+      </form>
+    </dialog>
+    </main>
+    <footer>
+      <div class="footer-cham">
+        <div class="cham">
+          <h3>EMS Event Management System</h3>
+          <p>Ahmadu Bello Way</p>
+          <p>Jos, Nigeria.</p>
+          <p>info@esm.org</p>
+          <p>+2348035917764</p>
+        </div>
+        <div class="cham">
+          <ul class="social-media">
+            <li>
+              <a href="https://facebook.com" target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://instagram.com" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://linkedin.com" target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="cham">
+          <p>WDD231 Final Project</p>
+          <p>Daniel Oyeniyi</p>
+          <p id="current-year">&copy; 2025 ✿ EMS Event Management System</p>
+          <p id="lastModified"></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
