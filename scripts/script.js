@@ -121,7 +121,8 @@ function displayEvents(eventsToDisplay) {
     const cardElement = `
       <div class="card">
         <h2 class="card-title">${event.name}</h2>
-        <img src="${event.image}" alt="${event.name}" class="card-image">
+       <!-- Add lazy loading to the image -->
+        <img src="${event.image}" alt="${event.name}" class="card-image" loading="lazy">
         <p class="card-date"><strong>Date:</strong> ${event.date}</p>
         <address class="card-address"><strong>Location:</strong> ${event.location}</address>
         <p class="card-description"><strong>Description:</strong> ${event.description}</p>
